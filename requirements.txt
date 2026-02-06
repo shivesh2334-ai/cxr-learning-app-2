@@ -1,0 +1,6 @@
+# Minimal requirements.txt
+streamlit
+google-generativeai
+Pillow
+opencv-python
+numpy
