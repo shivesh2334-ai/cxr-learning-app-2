@@ -1,0 +1,230 @@
+{
+  "technical_quality": {
+    "positioning": {
+      "ideal": "Spinous processes equidistant from medial clavicular heads",
+      "common_errors": [
+        "Patient rotation",
+        "Asymmetric shoulder positioning",
+        "Scapulae not laterally rotated"
+      ]
+    },
+    "penetration": {
+      "ideal": "Vertebral bodies faintly visible through mediastinum",
+      "overpenetrated": "Lungs appear too dark, loss of detail",
+      "underpenetrated": "Mediastinum too white, may simulate infiltrate"
+    },
+    "inspiration": {
+      "ideal": "Right hemidiaphragm at 6th anterior rib or 10th posterior rib",
+      "poor": "Less than 6 anterior ribs visible",
+      "effects": "False cardiomegaly, crowded lung markings"
+    },
+    "motion": {
+      "indicators": ["Blurred cardiac borders", "Indistinct vessels", "Double diaphragm"],
+      "action": "Consider repeating the radiograph"
+    }
+  },
+  
+  "patterns": {
+    "interstitial": {
+      "reticular": {
+        "description": "Fine linear opacities forming a network",
+        "ddx": ["Pulmonary fibrosis", "Interstitial edema", "Lymphangitic carcinomatosis"]
+      },
+      "nodular": {
+        "description": "Multiple small nodules",
+        "distributions": {
+          "perilymphatic": ["Sarcoidosis", "Silicosis"],
+          "random": ["Miliary TB", "Hematogenous metastases"],
+          "centrilobular": ["Hypersensitivity pneumonitis", "Respiratory bronchiolitis"]
+        }
+      },
+      "honeycombing": {
+        "description": "Clustered cystic airspaces, subpleural",
+        "significance": "End-stage pulmonary fibrosis",
+        "ddx": ["UIP/IPF", "Asbestosis", "Chronic hypersensitivity pneumonitis"]
+      }
+    },
+    
+    "air_space": {
+      "consolidation": {
+        "description": "Homogeneous opacity obscuring vessels",
+        "key_feature": "Air bronchograms",
+        "ddx": ["Pneumonia", "Pulmonary edema", "Hemorrhage", "ARDS"]
+      },
+      "ground_glass": {
+        "description": "Hazy opacity with visible vessels",
+        "ddx": ["Early pneumonia", "Edema", "Hemorrhage", "Pneumonitis"]
+      }
+    },
+    
+    "distribution": {
+      "upper_lobe": ["Tuberculosis", "Silicosis", "Sarcoidosis", "Ankylosing spondylitis"],
+      "lower_lobe": ["UIP/IPF", "Asbestosis", "NSIP", "Aspiration"],
+      "perihilar": ["Sarcoidosis", "Pulmonary edema", "Lymphoma"],
+      "peripheral": ["COP", "CEP", "Chronic eosinophilic pneumonia"]
+    }
+  },
+  
+  "common_findings": {
+    "consolidation": {
+      "definition": "Air space opacity that obscures vessels",
+      "causes": {
+        "infectious": ["Bacterial pneumonia", "Viral pneumonia", "Fungal infection"],
+        "non_infectious": ["Pulmonary edema", "Hemorrhage", "Aspiration", "Contusion"]
+      },
+      "features": {
+        "air_bronchograms": "Present in air space disease",
+        "silhouette_sign": "Loss of adjacent normal border"
+      }
+    },
+    
+    "pleural_effusion": {
+      "signs": {
+        "small": "Blunting of costophrenic angle",
+        "moderate": "Homogeneous opacity in lower hemithorax",
+        "large": "Complete opacification, mediastinal shift"
+      },
+      "meniscus_sign": "Concave upper border",
+      "ddx": ["CHF", "Pneumonia", "Malignancy", "Cirrhosis", "PE"]
+    },
+    
+    "pneumothorax": {
+      "signs": ["Visible visceral pleural line", "Absent lung markings peripherally", "Deep sulcus sign (supine)"],
+      "size_assessment": "Measure at hilum level",
+      "tension_signs": ["Mediastinal shift", "Depressed hemidiaphragm", "Tracheal deviation"],
+      "management": {
+        "small": "Observation",
+        "large": "Chest tube",
+        "tension": "Emergency decompression"
+      }
+    },
+    
+    "cardiomegaly": {
+      "definition": "CTR >50% on PA view",
+      "causes": {
+        "dilated": ["CHF", "Dilated cardiomyopathy", "Valve disease"],
+        "pericardial": ["Pericardial effusion"],
+        "congenital": ["ASD", "VSD"]
+      },
+      "false_cardiomegaly": ["AP view", "Poor inspiration", "Pectus excavatum"]
+    }
+  },
+  
+  "anatomic_checklist": {
+    "devices_lines": [
+      "Endotracheal tube",
+      "Central venous catheter",
+      "Nasogastric tube",
+      "Chest tubes",
+      "Pacemaker/ICD",
+      "Surgical clips"
+    ],
+    
+    "chest_wall": [
+      "Soft tissues",
+      "Ribs (fractures, lesions)",
+      "Clavicles",
+      "Scapulae",
+      "Breast shadows"
+    ],
+    
+    "mediastinum": [
+      "Heart size (CTR)",
+      "Heart borders",
+      "Aortic arch",
+      "Mediastinal width",
+      "Trachea position"
+    ],
+    
+    "hila": [
+      "Size (normal/enlarged)",
+      "Position (right lower than left)",
+      "Density",
+      "Contour"
+    ],
+    
+    "lungs": [
+      "Volumes",
+      "Symmetry",
+      "Vascularity",
+      "Opacities",
+      "Masses/nodules"
+    ],
+    
+    "airways": [
+      "Trachea position",
+      "Trachea caliber",
+      "Carina",
+      "Main bronchi",
+      "Air bronchograms"
+    ],
+    
+    "pleura_diaphragm": [
+      "Pleural effusion",
+      "Pneumothorax",
+      "Pleural thickening",
+      "Diaphragm position",
+      "Costophrenic angles",
+      "Free air under diaphragm"
+    ]
+  },
+  
+  "quick_references": {
+    "silhouette_sign": {
+      "right_heart_border": "Right middle lobe",
+      "left_heart_border": "Lingula",
+      "right_diaphragm": "Right lower lobe",
+      "left_diaphragm": "Left lower lobe",
+      "aortic_knob": "Left upper lobe"
+    },
+    
+    "classic_signs": {
+      "golden_s": "RUL collapse with hilar mass",
+      "sail_sign": "LUL collapse (thymic sail in children)",
+      "hampton_hump": "Peripheral wedge opacity (PE)",
+      "westermark_sign": "Focal oligemia (PE)",
+      "deep_sulcus": "Pneumothorax on supine film",
+      "luftsichel": "LUL collapse (crescent of air)"
+    },
+    
+    "kerley_lines": {
+      "A_lines": "Long diagonal lines in upper zones (interstitial edema)",
+      "B_lines": "Short horizontal lines at bases (interstitial edema)",
+      "C_lines": "Reticular pattern (both A and B lines)"
+    }
+  },
+  
+  "differential_diagnosis_frameworks": {
+    "focal_opacity": [
+      "Pneumonia",
+      "Atelectasis",
+      "Mass/tumor",
+      "Contusion",
+      "Infarct"
+    ],
+    
+    "diffuse_opacity": [
+      "Pulmonary edema",
+      "ARDS",
+      "Pneumonia (multifocal)",
+      "Hemorrhage",
+      "Aspiration"
+    ],
+    
+    "cavitary_lesion": [
+      "Tuberculosis",
+      "Lung abscess",
+      "Squamous cell carcinoma",
+      "Wegener's granulomatosis",
+      "Septic emboli"
+    ],
+    
+    "multiple_nodules": [
+      "Metastases",
+      "Infection (TB, fungal)",
+      "Sarcoidosis",
+      "Rheumatoid nodules",
+      "Septic emboli"
+    ]
+  }
+}
