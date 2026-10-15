@@ -22,11 +22,11 @@ $('analyze').addEventListener('click', async () => {
     if($('localOnly').checked) data=localReport($('observations').value,$('history').value);
     else {
     const image=await new Promise((resolve,reject)=>{const reader=new FileReader(); reader.onload=()=>resolve(reader.result.split(',')[1]); reader.onerror=reject; reader.readAsDataURL(selectedImage);});
-    const response=await fetch('/api/analyze',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({image,mimeType:selectedImage.type,mode:$('mode').value,history:$('history').value,observations:$('observations').value})});
+    const response=await fetch('/api/analyze',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({image,mimeType:selectedImage.type,provider:$('provider').value,mode:$('mode').value,history:$('history').value,observations:$('observations').value})});
     data=await response.json(); if (!response.ok) throw new Error(data.error || 'Analysis unavailable.');
     }
     if(data.source==='ai') annotations=data.annotations || []; drawFilm();
-    $('result').value=data.result; $('status').textContent=data.source==='local' ? `${data.fallbackReason || 'Local mode.'} Image not automatically interpreted; draft uses your observations.` : 'AI draft complete — verify report and marker positions.'; $('download').hidden=false;
+    $('result').value=data.result; $('status').textContent=data.source==='local' ? `${data.fallbackReason || 'Local mode.'} Image not automatically interpreted; draft uses your observations.` : `${data.provider || 'AI'} draft complete — verify report and marker positions.`; $('download').hidden=false;
   } catch(error) { const fallback=localReport($('observations').value,$('history').value); $('result').value=fallback.result; annotations=[];drawFilm();$('download').hidden=false;$('status').textContent='Network/API unavailable. Local draft uses your observations only; image not interpreted.'; } finally { $('analyze').disabled=false; $('upload').disabled=false; }
 });
 $('download').onclick=()=>download($('result').value,'cxr-analysis.txt');

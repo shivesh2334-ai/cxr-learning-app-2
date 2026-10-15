@@ -36,3 +36,11 @@ Educational drafts require qualified clinician review. The original learning lib
 Teaching chunks cover bullae/pneumothorax differentiation, consolidation, atelectasis, effusion, interstitial patterns and focal lesions. Source URLs are included in local reports. Retrieval relevance is text overlap, not diagnostic confidence; negated observations can still retrieve related teaching information, which remains separate from patient findings. Add reviewed chunks and sources in `public/reporting.js` to extend coverage. The original image from the chat is not bundled or used as a training example.
 
 Automated tests cover input validation, missing keys, no-observation abstention, provider success/failure, malformed JSON, coordinate bounds and explicit local mode. Real provider inference needs a configured key and clinical validation; no diagnostic accuracy or localization performance has been established.
+
+## Free-plan vision API: Groq
+
+Create a free-plan API key at https://console.groq.com/keys and set **GROQ_API_KEY** as a server-only Vercel environment variable. Optional **GROQ_VISION_MODEL** defaults to `qwen/qwen3.8-27b`, listed in Groq's vision and free-plan limits documentation at implementation time. Redeploy after configuring it. Keep the account on the free plan if zero spend is required; the app cannot determine your provider billing tier or guarantee future pricing. Never paste keys into browser code or commit them.
+
+Choose **Groq vision** to read uploaded pixels and draft a report/approximate numbered findings. **Auto** uses Gemini when its key is configured, otherwise Groq. An explicitly selected provider never silently forwards the image to another provider. Provider errors, 429 quota responses, timeouts or malformed output return the local observation-based draft. Local-only mode avoids both cloud providers entirely.
+
+Groq receives the uploaded image and supplied clinical context. Use de-identified teaching material and review provider data terms. This is a general vision model, not a validated CXR diagnostic model. Free-plan quotas vary by account/model; consult https://console.groq.com/docs/rate-limits and https://console.groq.com/docs/vision. A free-plan key is still required; there is no anonymous image-reading service bundled with the app.
